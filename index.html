@@ -8,6 +8,13 @@
   
   <link rel="stylesheet" href="./assets/reset.css">
   <link rel="stylesheet" href="./assets/style.css">
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+
   <title>Weather Dashboard</title>
 </head>
 <body>
@@ -16,23 +23,22 @@
   </header>
 
   <section class="grid-x grid-padding-x">
-  <div class="left-column cell medium-4">
+  <div class="left-column cell medium-3">
     <h2>Search for a city:</h2>
-    <input type="text" placeholder="type a city name">
-    <button class="submit button">search</button>
+    <input id="input-bar" type="text" placeholder="type a city name">
+    <button id="search-button" class="submit button">search</button>
     <hr>
     <ul class="previous-search">
-      <li>Syndey</li>
-      <li>Melbourne</li>
+      
     </ul>
 
   </div>
-  <div class="main cell medium-8">
+  <div class="main cell medium-9">
     <div class="current-weather">
 
     </div>
     <h2>5-day forecast:</h2>
-    <div class="card-divider">
+    <div class="card-section grid-x">
 
     </div>
 

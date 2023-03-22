@@ -5,10 +5,46 @@ header{
   color: white;
   margin-bottom: 20px;
 }
+h2{
+  font-weight: bolder;
+}
+
+input{
+  height: 400px;
+}
 .current-weather{
   border-style: solid;
   border-width: 2px;
   border-radius: 5px;
   border-color: black;
   height: 300px;
+  margin-left: 15px;
+  background-color: rgb(148, 146, 160);
+  color: rgb(12, 13, 14);
+  font-size: x-large;
+}
+.current-weather strong{
+  font-size: xx-large;
+}
+
+img{
+ height: 50px;
+ width: 50px;
+}
+h2{
+  margin-left: 15px;
+}
+.card-section{
+  padding: 0;
+}
+
+.card{
+  height: 300px;
+  margin: 15px;
+  background-color: rgb(148, 146, 160);
+  color: rgb(12, 13, 14);
+  font-size: x-large;
+}
+.card p{
+  margin: 5px
 }
