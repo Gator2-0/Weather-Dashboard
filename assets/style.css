@@ -1,3 +1,7 @@
+:root{
+  --background: rgb(148, 146, 160)
+}
+
 header{
   text-align: center;
   height: 100px;
@@ -19,7 +23,7 @@ input{
   border-color: black;
   height: 300px;
   margin-left: 15px;
-  background-color: rgb(148, 146, 160);
+  background-color: var(--background);
   color: rgb(12, 13, 14);
   font-size: x-large;
 }
@@ -31,9 +35,15 @@ img{
  height: 50px;
  width: 50px;
 }
-h2{
+h2, #input-bar, #search-button{
   margin-left: 15px;
 }
+
+#input-bar, #search-button{
+  border-radius: 10px;
+}
+
+
 .card-section{
   padding: 0;
 }
@@ -47,4 +57,17 @@ h2{
 }
 .card p{
   margin: 5px
+}
+
+li{
+  height: 100px;
+  width: 100%;
+  color: white;
+  background-color: rgb(12, 31, 206);
+  font-size: 50px;
+  text-align: center;
+  
+  margin-bottom: 10px;
+  border-radius: 10px;
+
 }
