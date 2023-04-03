@@ -68,24 +68,15 @@ function renderBlank(){
   $(".previous-search").children().remove();
 }
 
-function displayPreviousSearch(){
-  let previoussearch = JSON.parse(localStorage.getItem('citySearched'));
-  if(!previoussearch){
-    return
-  }else{
-    for (let index = 0; index < previoussearch.length; index++) {
-      let search = previoussearch[index];
-      let li =$("li").text(search).addClass(list)
-      $(".previous-search").append(li);
-    }
-  }
-}
+
 function updateLocalStorage(city){
   let retrievedSearch =JSON.parse(localStorage.getItem('previousSearch'));
   if(!retrievedSearch){
     retrievedSearch = []
   }
-  retrievedSearch.push(city)
+  if(city){
+    retrievedSearch.push(city)
+  }
   retrievedSearch.forEach(element => {
     $(".previous-search").append($("<li>").text(element))
   });
@@ -93,34 +84,27 @@ function updateLocalStorage(city){
 }
 
 function renderResult(city) { 
-  city = inputBar.val();
-  if(city){
   console.log('the city chosen is: '+ city)
   renderBlank();
   updateLocalStorage(city);
   getForecast();
   getCurrentWeather();
   
-  }
 }
 
-
+$(".previous-search").on('click',"li",function (){ 
+  city = $(event.target).text();
+  renderResult(city);
+ })
 
 searchButton.on('click',function(){
-  
   city = inputBar.val();
-  // if(city){
-  // console.log('the city chosen is: '+ city)
-  // renderBlank();
-  // updateLocalStorage(city);
-  // getForecast();
-  // getCurrentWeather();
-  // renderResult("test = "+inputBar.val())
-
-
-  // }
-  renderResult(city)
-   
+  if(city){
+    renderResult(city)
+  }else(
+    updateLocalStorage(null)
+  )
+  
 });
 
 

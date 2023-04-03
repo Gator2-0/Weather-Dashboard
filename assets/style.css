@@ -66,7 +66,7 @@ li{
   background-color: rgb(12, 31, 206);
   font-size: 50px;
   text-align: center;
-  
+  cursor: pointer;
   margin-bottom: 10px;
   border-radius: 10px;
 
