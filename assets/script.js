@@ -77,9 +77,17 @@ function updateLocalStorage(city){
   if(city){
     retrievedSearch.push(city)
   }
-  retrievedSearch.forEach(element => {
-    $(".previous-search").append($("<li>").text(element))
-  });
+
+  for (let index = 0; index < 6; index++) {
+    let choice = (retrievedSearch.length) - 1 - index;
+    console.log(retrievedSearch[choice]);
+
+    if(retrievedSearch[index]){
+      $(".previous-search").append($("<li>").text(retrievedSearch[choice]))
+    }
+     
+  }
+
   localStorage.setItem('previousSearch', JSON.stringify(retrievedSearch))
 }
 
