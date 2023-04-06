@@ -32,7 +32,7 @@ function displayForecastWeatherData(object, htmlLocation){
 
 
 async function getcoordonates(){
-  let response = await fetch( "http://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=1&appid="+ apiKey);
+  let response = await fetch( "https://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=1&appid="+ apiKey);
   let data = await response.json()
   let coordonates = [data[0].lat, data[0].lon]
   console.log(coordonates)
