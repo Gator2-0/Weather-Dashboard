@@ -99,6 +99,7 @@ $(".previous-search").on('click',"li",function (){
 
 searchButton.on('click',function(){
   city = inputBar.val();
+  console.log('lower case'+ city.toLowerCase())
   if(city){
     renderResult(city)
   }else(
