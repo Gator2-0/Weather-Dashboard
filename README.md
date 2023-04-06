@@ -27,6 +27,6 @@ Previous searchs are saved in the left of the screen. You can click on them to s
 
 ## Where
 
-If you weant to use this app, just click [here]()
+If you weant to use this app, just click [here](https://gator2-0.github.io/Weather-Dashboard/)
 
 

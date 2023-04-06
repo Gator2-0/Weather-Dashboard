@@ -9,7 +9,7 @@ let inputBar = $('#input-bar');
 function displayCurrentWeatherData(object, htmlLocation){
   console.log(object)
           let city = $("<strong>").text(object.name+' '+ dayjs().format('(d/m/YYYY)'));
-          let icon = $("<img>").attr({'src':'http://openweathermap.org/img/w/'+object.weather[0].icon+'.png'}); 
+          let icon = $("<img>").attr({'src':'https://openweathermap.org/img/w/'+object.weather[0].icon+'.png'}); 
           let temp = $("<p>").text('Temp: '+ object.main.temp +'°C');     
           let wind= $("<p>").text('Wind: '+ object.wind.speed + 'KM/h');      
           let hum = $("<p>").text('Humidity: '+ object.main.humidity+ '%');
@@ -21,7 +21,7 @@ function displayForecastWeatherData(object, htmlLocation){
   let card = $("<div>").addClass('card');
 
   let date = $("<strong>").text(object.dt_txt.split(' ')[0]);
-  let icon = $("<img>").attr({'src':'http://openweathermap.org/img/w/'+object.weather[0].icon+'.png'});
+  let icon = $("<img>").attr({'src':'https://openweathermap.org/img/w/'+object.weather[0].icon+'.png'});
   let temp = $("<p>").text('Temp: '+ object.main.temp +'°C') ;
   let wind = $("<p>").text('Wind: '+ object.wind.speed + 'KM/h');
   let hum = $("<p>").text('Humidity: '+ object.main.humidity+ '%');
